@@ -1,0 +1,5 @@
+@use '../../scss/mixins' as mix;
+
+.main-container {
+    @include mix.hero-grad;
+}

@@ -1,0 +1,35 @@
+.accordion__container {
+	width: 100%;
+}
+
+.accordion__title {
+	width: 100%;
+	h4 {
+		display: block;
+		margin: 0 auto;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}
+
+	span {
+		float: left;
+	}
+	cursor: pointer;
+}
+
+.accordion__chevr {
+	transition: all 0.3s ease-in-out;
+}
+
+.accordion__content {
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.3s cubic-bezier(0, 1, 0, 1);
+}
+
+.accordion__content.show {
+	height: auto;
+	max-height: 9999px;
+	transition: all 0.3s cubic-bezier(1, 0, 1, 0);
+}

@@ -1,0 +1,12 @@
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin hero-grad {
+	background: #4da8da;
+	background: -webkit-linear-gradient(top left, #4da8da, #27546d);
+	background: -moz-linear-gradient(top left, #4da8da, #27546d);
+	background: linear-gradient(to bottom right, #4da8da, #27546d);
+}

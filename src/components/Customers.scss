@@ -1,0 +1,62 @@
+@use '../scss/vars' as vars;
+
+.customers__container__main {
+	background-color: vars.$primary-white;
+	width: 100%;
+}
+
+.customers__container__content {
+	width: 50%;
+	margin: 0px auto;
+	padding: 50px 0;
+	h2 {
+		text-align: center;
+		margin-bottom: 50px;
+	}
+}
+
+.customers__container__logos {
+	margin: 0px auto;
+	width: 80%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.customers__link {
+	margin: 0px 10px;
+	img {
+		height: 85px;
+		width: auto;
+	}
+}
+
+@media screen and (max-width: 1025px) {
+	.customers__container__content {
+		width: 80%;
+	}
+	.customers__container__logos {
+		width: 100%;
+	}
+	.customers__link {
+		img {
+			height: 75px;
+			width: auto;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.customers__container__content {
+		width: 90%;
+	}
+	.customers__container__logos {
+		width: 100%;
+	}
+	.customers__link {
+		img {
+			height: 70px;
+			width: auto;
+		}
+	}
+}

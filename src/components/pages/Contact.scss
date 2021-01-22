@@ -1,0 +1,22 @@
+@use '../../scss/vars' as vars;
+@use '../../scss/mixins' as mix;
+
+.contact__container {
+	@include mix.hero-grad;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin: 0;
+	.footer__info {
+		justify-content: center;
+	}
+	.footer__info--left {
+		display: none;
+	}
+	.footer__info--right {
+		width: 80%;
+	}
+	.footer__copyright {
+		margin-top: 50px;
+	}
+}

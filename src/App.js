@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './App.scss';
+import Navbar from './components/Navbar';
+import Home from './components/pages/Home';
+import ProjectsPage from './components/pages/ProjectsPage';
+import News from './components/pages/News';
+import About from './components/pages/About';
+import Contact from './components/pages/Contact';
+import ScrollToTop from './components/tools/ScrollToTop';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	AOS.init();
+	return (
+		<Router>
+			<ScrollToTop />
+			<Navbar />
+			<Switch>
+				<Route path='/' exact component={Home} />
+				<Route path='/projects' exact component={ProjectsPage} />
+				<Route path='/news' exact component={News} />
+				<Route path='/about' exact component={About} />
+				<Route path='/contact' exact component={Contact} />
+			</Switch>
+		</Router>
+	);
 }
 
 export default App;
