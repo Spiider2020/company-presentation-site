@@ -1,37 +1,53 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
+import Popup from './Popup';
 import { btnResize } from './tools/Button_resize';
 import {
 	FormData,
 	MaxFooterMessage,
 	MaxContactMessage,
 	CheckboxAgreementText,
+	PopUpMessage,
+	PopUpErrMessage,
 } from '../Data';
 import './ContactForm.scss';
 
 function ContactForm({ formStyle }) {
 	const agreeText = CheckboxAgreementText.split('$$');
+	const default_size = FormData.btnSize;
+
+	const [buttonSize, setButton] = useState(btnResize(default_size));
+	const [isOpen, setIsOpen] = useState(false);
+	const [popUpTitle, setPopUpTitle] = useState('Sending...');
+	const [popUpContent, setPopUpContent] = useState('');
 
 	const getAgreeText = () => {
 		return (
 			<>
 				{agreeText.map((item, index) => {
 					if (index === 0) {
-						return item;
+						return <span key={'txt-' + index}>{item}</span>;
 					} else {
 						return (
-							<>
+							<span key={'txt-' + index}>
 								<br />
 								{item}
-							</>
+							</span>
 						);
 					}
 				})}
 			</>
 		);
 	};
-	const default_size = FormData.btnSize;
-	const [buttonSize, setButton] = useState(btnResize(default_size));
+
+	const togglePopup = () => {
+		setIsOpen(!isOpen);
+	};
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		togglePopup();
+	};
 
 	const handleChangeButton = () => {
 		setButton(btnResize(default_size));
@@ -50,7 +66,7 @@ function ContactForm({ formStyle }) {
 	if (formStyle === 'footer') {
 		formDisplay = (
 			<div className='footer__form__container'>
-				<form className='footer__form' spellCheck='false' action=''>
+				<form className='footer__form' spellCheck='false' onSubmit={handleSubmit}>
 					<input
 						className='footer__form--half'
 						type='text'
@@ -64,6 +80,7 @@ function ContactForm({ formStyle }) {
 						className='footer__form--half'
 						type='email'
 						name='email'
+						pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
 						placeholder={FormData.defEmail}
 						required
 					/>
@@ -112,6 +129,13 @@ function ContactForm({ formStyle }) {
 						</Button>
 					</div>
 				</form>
+				{isOpen && (
+					<Popup
+						title={popUpTitle}
+						content={popUpContent}
+						handleClose={togglePopup}
+					/>
+				)}
 			</div>
 		);
 	} else if (formStyle === 'main') {
@@ -138,6 +162,7 @@ function ContactForm({ formStyle }) {
 							type='email'
 							name='email'
 							id='email'
+							pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
 							placeholder=' '
 							required
 						/>

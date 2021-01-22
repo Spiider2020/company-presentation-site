@@ -272,6 +272,11 @@ export const MaxContactMessage = 600;
 export const CheckboxAgreementText =
 	'Sunt de acord sa fiu contactat de un membru din echipa DreamOnIT.$$(Datele dumneavoastra nu vor fi folosite in alt scop.)';
 
+export const PopUpMessage =
+	'Veti fi contactat de un membru DreamOnIT in cel mai scurt timp posibil.';
+
+export const PopUpErrMessage = 'Ne pare rau! Nu s-a putut trimite formularul';
+
 export const FormData = {
 	defName: 'Nume',
 	defEmail: 'Email',
