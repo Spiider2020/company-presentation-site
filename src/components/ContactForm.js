@@ -15,11 +15,24 @@ import './ContactForm.scss';
 function ContactForm({ formStyle }) {
 	const agreeText = CheckboxAgreementText.split('$$');
 	const default_size = FormData.btnSize;
+	const serverLocation = 'http://localhost:3005/send';
+	const initialFormContent = {
+		name: '',
+		email: '',
+		phone: '',
+		company: '-- not filled in --',
+		message: '-- not filled in --',
+	};
 
 	const [buttonSize, setButton] = useState(btnResize(default_size));
 	const [isOpen, setIsOpen] = useState(false);
-	const [popUpTitle, setPopUpTitle] = useState('Sending...');
+	const [popUpTitle, setPopUpTitle] = useState('');
 	const [popUpContent, setPopUpContent] = useState('');
+	const [formContent, setFormContent] = useState(initialFormContent);
+
+	const handleInputChange = (e) => {
+		setFormContent({ ...formContent, [e.target.name]: e.target.value });
+	};
 
 	const getAgreeText = () => {
 		return (
@@ -46,7 +59,24 @@ function ContactForm({ formStyle }) {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
+		e.target.reset();
+		setPopUpTitle('Sending...');
 		togglePopup();
+		fetch(serverLocation, {
+			method: 'post',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(formContent),
+		})
+			.then((respose) => respose.json())
+			.then((responseMessage) => {
+				if (responseMessage === 'success') {
+					setPopUpTitle('Succes!');
+					setPopUpContent(PopUpMessage);
+				} else {
+					setPopUpTitle('Ceva nu a mers!');
+					setPopUpContent(PopUpErrMessage);
+				}
+			});
 	};
 
 	const handleChangeButton = () => {
@@ -74,6 +104,7 @@ function ContactForm({ formStyle }) {
 						patter='[a-zA-Z]'
 						minLength='4'
 						placeholder={FormData.defName}
+						onChange={handleInputChange}
 						required
 					/>
 					<input
@@ -82,6 +113,7 @@ function ContactForm({ formStyle }) {
 						name='email'
 						pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
 						placeholder={FormData.defEmail}
+						onChange={handleInputChange}
 						required
 					/>
 					<input
@@ -90,6 +122,7 @@ function ContactForm({ formStyle }) {
 						name='phone'
 						pattern='[0-9]{9,10}'
 						placeholder={FormData.defPhone}
+						onChange={handleInputChange}
 						required
 					/>
 					<input
@@ -97,6 +130,7 @@ function ContactForm({ formStyle }) {
 						type='text'
 						name='company'
 						placeholder={FormData.defCompany}
+						onChange={handleInputChange}
 					/>
 					<input
 						className='footer__form--full'
@@ -106,6 +140,7 @@ function ContactForm({ formStyle }) {
 							FormData.defMessage + ' (max ' + MaxFooterMessage + ' chars)'
 						}
 						maxLength={MaxFooterMessage}
+						onChange={handleInputChange}
 					/>
 					<div className='footer__form--full footer__form__agree'>
 						<label htmlFor='agreement'>{getAgreeText()}</label>
@@ -142,7 +177,7 @@ function ContactForm({ formStyle }) {
 		formDisplay = (
 			<div className='contact__form__main__container'>
 				<div className='contact__form__container'>
-					<form className='contact__form' spellCheck='false' action=''>
+					<form className='contact__form' spellCheck='false' onSubmit={handleSubmit}>
 						<label htmlFor='name'>{FormData.defName}</label>
 						<br />
 						<input
@@ -153,6 +188,7 @@ function ContactForm({ formStyle }) {
 							patter='[a-zA-Z]'
 							minLength='4'
 							placeholder=' '
+							onChange={handleInputChange}
 							required
 						/>
 						<label htmlFor='email'>{FormData.defEmail}</label>
@@ -164,6 +200,7 @@ function ContactForm({ formStyle }) {
 							id='email'
 							pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$'
 							placeholder=' '
+							onChange={handleInputChange}
 							required
 						/>
 						<label htmlFor='phone'>{FormData.defPhone}</label>
@@ -175,6 +212,7 @@ function ContactForm({ formStyle }) {
 							id='phone'
 							pattern='[0-9]{9,10}'
 							placeholder=' '
+							onChange={handleInputChange}
 							required
 						/>
 						<label htmlFor='company'>{FormData.defCompany}</label>
@@ -184,6 +222,7 @@ function ContactForm({ formStyle }) {
 							type='text'
 							name='company'
 							id='company'
+							onChange={handleInputChange}
 							placeholder=' '
 						/>
 						<label htmlFor='message'>
@@ -198,6 +237,7 @@ function ContactForm({ formStyle }) {
 							placeholder=' '
 							rows='5'
 							maxLength={MaxContactMessage}
+							onChange={handleInputChange}
 						/>
 						<div className='contact__form__agree'>
 							<label htmlFor='agreement1'>{getAgreeText()}</label>
@@ -221,6 +261,13 @@ function ContactForm({ formStyle }) {
 							</Button>
 						</div>
 					</form>
+					{isOpen && (
+						<Popup
+							title={popUpTitle}
+							content={popUpContent}
+							handleClose={togglePopup}
+						/>
+					)}
 				</div>
 			</div>
 		);
