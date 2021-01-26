@@ -159,6 +159,8 @@ export const ContactTitleEn = 'Contact';
 export const CheckboxAgreementTextEn =
 	'I agree to be contacted by a DreamOnIT team member. (Your data is not going to be used in any other way.)';
 
+export const PopUpSendingEn = 'Sending...';
+
 export const PopUpMessageEn =
 	'You will be contatcted by a member  DreamOnIT as soon as possible.';
 

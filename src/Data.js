@@ -14,6 +14,7 @@ import {
 	CustomerTitleEn,
 	ContactTitleEn,
 	CheckboxAgreementTextEn,
+	PopUpSendingEn,
 	PopUpMessageEn,
 	PopUpErrMessageEn,
 	FormDataEn,
@@ -39,6 +40,7 @@ import {
 	CustomerTitleRo,
 	ContactTitleRo,
 	CheckboxAgreementTextRo,
+	PopUpSendingRo,
 	PopUpMessageRo,
 	PopUpErrMessageRo,
 	FormDataRo,
@@ -279,6 +281,8 @@ export const MaxContactMessage = 600;
 // forteaza rand nou cu:  $$
 export const CheckboxAgreementText =
 	lang === 'ro' ? CheckboxAgreementTextRo : CheckboxAgreementTextEn;
+
+export const PopUpSending = lang === 'ro' ? PopUpSendingRo : PopUpSendingEn;
 
 export const PopUpMessage = lang === 'ro' ? PopUpMessageRo : PopUpMessageEn;
 

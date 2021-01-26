@@ -7,6 +7,7 @@ import {
 	MaxFooterMessage,
 	MaxContactMessage,
 	CheckboxAgreementText,
+	PopUpSending,
 	PopUpMessage,
 	PopUpErrMessage,
 } from '../Data';
@@ -60,7 +61,7 @@ function ContactForm({ formStyle }) {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		e.target.reset();
-		setPopUpTitle('Sending...');
+		setPopUpTitle(PopUpSending);
 		togglePopup();
 		fetch(serverLocation, {
 			method: 'post',

@@ -159,6 +159,8 @@ export const ContactTitleRo = 'Contact';
 export const CheckboxAgreementTextRo =
 	'Sunt de acord sa fiu contactat de un membru din echipa DreamOnIT.$$(Datele dumneavoastra nu vor fi folosite in alt scop.)';
 
+export const PopUpSendingRo = 'Se trimite...';
+
 export const PopUpMessageRo =
 	'Veti fi contactat de un membru DreamOnIT in cel mai scurt timp posibil.';
 
