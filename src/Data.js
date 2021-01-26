@@ -1,31 +1,66 @@
+import {
+	NavItemsEn,
+	HeroEn,
+	ServQuoteEn,
+	ServTitleEn,
+	ServListEn,
+	ServBtnEn,
+	ProjectsTitleEn,
+	ProjectsLinkTextEn,
+	ProjectListEn,
+	ProjectsBtnEn,
+	WorkflowTitleEn,
+	WorkflowPasiEn,
+	CustomerTitleEn,
+	ContactTitleEn,
+	CheckboxAgreementTextEn,
+	PopUpMessageEn,
+	PopUpErrMessageEn,
+	FormDataEn,
+	ContactDataEn,
+	AboutTitleEn,
+	TeamMembersEn,
+	NewsTitleEn,
+	NewsListEn,
+} from './DataEn';
+import {
+	NavItemsRo,
+	HeroRo,
+	ServQuoteRo,
+	ServTitleRo,
+	ServListRo,
+	ServBtnRo,
+	ProjectsTitleRo,
+	ProjectsLinkTextRo,
+	ProjectListRo,
+	ProjectsBtnRo,
+	WorkflowTitleRo,
+	WorkflowPasiRo,
+	CustomerTitleRo,
+	ContactTitleRo,
+	CheckboxAgreementTextRo,
+	PopUpMessageRo,
+	PopUpErrMessageRo,
+	FormDataRo,
+	ContactDataRo,
+	AboutTitleRo,
+	TeamMembersRo,
+	NewsTitleRo,
+	NewsListRo,
+} from './DataRo';
+
+/* Limba ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+const lang = localStorage.getItem('lang');
+
+export const RoFlag = './images/lang/romania.svg';
+export const EnFlag = './images/lang/united-kingdom.svg';
+
+/*****************************************************************************/
+
 /* Bara navigatie +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-export const NavItems = [
-	{
-		title: 'Home',
-		url: '/',
-		cName: 'nav-links',
-	},
-	{
-		title: 'Projects',
-		url: '/projects',
-		cName: 'nav-links',
-	},
-	{
-		title: 'News',
-		url: '/news',
-		cName: 'nav-links',
-	},
-	{
-		title: 'About',
-		url: '/about',
-		cName: 'nav-links',
-	},
-	{
-		title: 'Contact',
-		url: '/contact',
-		cName: 'nav-links',
-	},
-];
+
+export const NavItems = lang === 'ro' ? NavItemsRo : NavItemsEn;
 
 export const NavLogo = './images/logo/logo_nobg.png';
 
@@ -34,16 +69,15 @@ export const NavLogo = './images/logo/logo_nobg.png';
 /* Hero ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 export const Hero = {
 	logoSrc: './images/logo/logo_nobg.png',
-	motto: 'Motto-ul firmei.\n Ceea ce propunem clientului.',
-	cta_text: 'Call to action',
+	motto: lang === 'ro' ? HeroRo.motto : HeroEn.motto,
+	cta_text: lang === 'ro' ? HeroRo.cta_text : HeroEn.cta_text,
 	cta_link: '/contact',
 	cta_type: 'btn--primary',
 	cta_size: 'btn--large',
 	cta_color: '',
-	part2_heading: 'Prezentare firma',
-	part2_text:
-		'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut et eum hic quibusdam harum labore fugiat iusto ipsam quo in, sed mollitia voluptatum dicta delectus adipisci placeat expedita id. Ratione.lorem. Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
-	p2_btn_text: 'Cine suntem',
+	part2_heading: lang === 'ro' ? HeroRo.part2_heading : HeroEn.part2_heading,
+	part2_text: lang === 'ro' ? HeroRo.part2_text : HeroEn.part2_text,
+	p2_btn_text: lang === 'ro' ? HeroRo.p2_btn_text : HeroEn.p2_btn_text,
 	p2_btn_link: '/about',
 	p2_btn_type: 'btn--outline',
 	p2_btn_size: 'btn--large',
@@ -58,33 +92,15 @@ export const CircuitsSrc = './images/circuits.svg';
 /**************************************************************************/
 
 /* Servicii ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-export const ServQuote =
-	'Citat inspirational care sa pastreze atentia vizitatorului.';
+export const ServQuote = lang === 'ro' ? ServQuoteRo : ServQuoteEn;
 
-export const ServTitle = 'Ce servicii oferim';
+export const ServTitle = lang === 'ro' ? ServTitleRo : ServTitleEn;
 
-export const ServList = [
-	{
-		title: 'Lista servicii 1',
-		serv: ['Optiune1', 'Optiune2', 'Optiune3', 'Optiune4', 'Optiune5', 'Optiune6'],
-	},
-	{
-		title: 'Lista servicii 2',
-		serv: ['Optiune1', 'Optiune2', 'Optiune3', 'Optiune4', 'Optiune5', 'Optiune6'],
-	},
-	{
-		title: 'Lista servicii 3',
-		serv: ['Optiune1', 'Optiune2', 'Optiune3', 'Optiune4', 'Optiune5', 'Optiune6'],
-	},
-	{
-		title: 'Lista servicii 4',
-		serv: ['Optiune1', 'Optiune2', 'Optiune3', 'Optiune4', 'Optiune5', 'Optiune6'],
-	},
-];
+export const ServList = lang === 'ro' ? ServListRo : ServListEn;
 
 export const ServBtn = {
-	text: 'Download lista servicii',
-	link: './listaservicii.txt',
+	text: lang === 'ro' ? ServBtnRo.text : ServBtnEn.text,
+	link: lang === 'ro' ? ServBtnRo.link : ServBtnEn.link,
 	type: 'btn--outline',
 	size: 'btn--wide',
 	color: 'white',
@@ -94,71 +110,84 @@ export const ServBtn = {
 
 /* Proiecte ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-export const ProjectsTitle = 'Proiectele noastre';
+export const ProjectsTitle = lang === 'ro' ? ProjectsTitleRo : ProjectsTitleEn;
 
-export const ProjectsLinkText = 'Vezi proiect';
+export const ProjectsLinkText =
+	lang === 'ro' ? ProjectsLinkTextRo : ProjectsLinkTextEn;
 
-export const ProjectList = [
+const ProjectListBp = [
 	{
-		name: 'Proiect 1',
+		name: '',
 		img: './images/projects/img1x1.png',
 		img2: './images/projects/img1x2.png',
 		alt: 'project1',
-		description: 'Descriere proiect 1 ',
+		description: '',
 		link: '#',
 	},
 	{
-		name: 'Proiect 2',
+		name: '',
 		img: './images/projects/img2x1.png',
 		img2: './images/projects/img2x2.png',
 		alt: 'project2',
-		description: 'Descriere proiect 2',
+		description: '',
 		link: '#',
 	},
 	{
-		name: 'Proiect 3',
+		name: '',
 		img: './images/projects/img3x1.png',
 		img2: './images/projects/img3x2.png',
 		alt: 'project3',
-		description: 'Descriere proiect 3',
+		description: '',
 		link: '#',
 	},
 	{
-		name: 'Proiect 4',
+		name: '',
 		img: './images/projects/img4x1.png',
 		img2: './images/projects/img4x2.png',
 		alt: 'project4',
-		description: 'Descriere proiect 4',
+		description: '',
 		link: '#',
 	},
 	{
-		name: 'Proiect 5',
+		name: '',
 		img: './images/projects/img5x1.png',
 		img2: './images/projects/img5x2.png',
 		alt: 'project5',
-		description: 'Descriere proiect 5',
+		description: '',
 		link: '#',
 	},
 	{
-		name: 'Proiect 6',
+		name: '',
 		img: './images/projects/img6x1.png',
 		img2: './images/projects/img6x2.png',
 		alt: 'project6',
-		description: 'Descriere proiect 6',
+		description: '',
 		link: '#',
 	},
 	{
-		name: 'Proiect 7',
+		name: '',
 		img: './images/projects/img7x1.png',
 		img2: './images/projects/img7x2.png',
 		alt: 'project7',
-		description: 'Descriere proiect 7',
+		description: '',
 		link: '#',
 	},
 ];
 
+export const ProjectList = ProjectListBp.map((item, index) => {
+	if (lang === 'ro') {
+		item.name = ProjectListRo[index].name;
+		item.description = ProjectListRo[index].description;
+		return item;
+	} else {
+		item.name = ProjectListEn[index].name;
+		item.description = ProjectListEn[index].description;
+		return item;
+	}
+});
+
 export const ProjectsBtn = {
-	text: 'Vezi toate',
+	text: lang === 'ro' ? ProjectsBtnRo : ProjectsBtnEn,
 	link: '/projects',
 	type: 'btn--outline',
 	size: 'btn--large',
@@ -169,36 +198,15 @@ export const ProjectsBtn = {
 
 /* WorkFlow ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-export const WorkflowTitle = 'Work flow';
+export const WorkflowTitle = lang === 'ro' ? WorkflowTitleRo : WorkflowTitleEn;
 
-export const WorkflowPasi = [
-	{
-		title: 'Pas1',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
-	},
-	{
-		title: 'Pas2',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
-	},
-	{
-		title: 'Pas3',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
-	},
-	{
-		title: 'Pas4',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
-	},
-];
+export const WorkflowPasi = lang === 'ro' ? WorkflowPasiRo : WorkflowPasiEn;
 
 /**************************************************************************/
 
 /* Clienti +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-export const CustomerTitle = 'Clientii nostri';
+export const CustomerTitle = lang === 'ro' ? CustomerTitleRo : CustomerTitleEn;
 
 export const CustomerList = [
 	{
@@ -262,7 +270,7 @@ export const CustomerList = [
 
 /* Contact +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-export const ContactTitle = 'Contact';
+export const ContactTitle = lang === 'ro' ? ContactTitleRo : ContactTitleEn;
 
 export const MaxFooterMessage = 200;
 
@@ -270,20 +278,19 @@ export const MaxContactMessage = 600;
 
 // forteaza rand nou cu:  $$
 export const CheckboxAgreementText =
-	'Sunt de acord sa fiu contactat de un membru din echipa DreamOnIT.$$(Datele dumneavoastra nu vor fi folosite in alt scop.)';
+	lang === 'ro' ? CheckboxAgreementTextRo : CheckboxAgreementTextEn;
 
-export const PopUpMessage =
-	'Veti fi contactat de un membru DreamOnIT in cel mai scurt timp posibil.';
+export const PopUpMessage = lang === 'ro' ? PopUpMessageRo : PopUpMessageEn;
 
-export const PopUpErrMessage = 'Ne pare rau! Nu s-a putut trimite formularul';
+export const PopUpErrMessage = lang === 'ro' ? PopUpErrMessageRo : PopUpErrMessageEn;
 
 export const FormData = {
-	defName: 'Nume',
+	defName: lang === 'ro' ? FormDataRo.defName : FormDataEn.defName,
 	defEmail: 'Email',
-	defPhone: 'Telefon',
-	defCompany: 'Firma',
-	defMessage: 'Mesaj',
-	btnText: 'Contact us',
+	defPhone: lang === 'ro' ? FormDataRo.defPhone : FormDataEn.defPhone,
+	defCompany: lang === 'ro' ? FormDataRo.defCompany : FormDataEn.defCompany,
+	defMessage: lang === 'ro' ? FormDataRo.defMessage : FormDataEn.defMessage,
+	btnText: lang === 'ro' ? FormDataRo.btnText : FormDataEn.btnText,
 	btnLink: '#',
 	btnType: 'btn--pill',
 	btnSize: 'btn--wide',
@@ -291,11 +298,12 @@ export const FormData = {
 };
 
 export const ContactData = {
-	phoneTitle: 'Telefon:',
+	phoneTitle: lang === 'ro' ? ContactDataRo.phoneTitle : ContactDataEn.phoneTitle,
 	phone: '0700 000 000',
 	emailTitle: 'Email:',
 	email: 'email1@dreamonit.ro',
-	addressTitle: 'Adresa:',
+	addressTitle:
+		lang === 'ro' ? ContactDataRo.addressTitle : ContactDataEn.addressTitle,
 	address: 'Str. oriunde pe harta',
 	socialTitle: 'Social',
 };
@@ -327,81 +335,64 @@ export const SocialData = [
 
 /* About +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-export const AboutTitle = 'Cine suntem';
+export const AboutTitle = lang === 'ro' ? AboutTitleRo : AboutTitleEn;
 
-export const TeamMembers = [
+const TeamMembersBp = [
 	{
 		name: 'Nume 1',
-		role: 'Pozitia in firma ',
-		description: 'Descriere membru',
+		role: '',
+		description: '',
 		emai: 'email1@dreamonit.ro',
 		img: './images/team/user.svg',
 	},
 	{
 		name: 'Nume 2',
-		role: 'Pozitia in firma ',
-		description: 'Descriere membru',
+		role: '',
+		description: '',
 		emai: 'email2@dreamonit.ro',
 		img: './images/team/user.svg',
 	},
 	{
 		name: 'Nume 3',
-		role: 'Pozitia in firma ',
-		description: 'Descriere membru',
+		role: '',
+		description: '',
 		emai: 'email3@dreamonit.ro',
 		img: './images/team/user.svg',
 	},
 	{
 		name: 'Nume 4',
-		role: 'Pozitia in firma ',
-		description: 'Descriere membru',
+		role: '',
+		description: '',
 		emai: 'email4@dreamonit.ro',
 		img: './images/team/user.svg',
 	},
 	{
 		name: 'Nume 5',
-		role: 'Pozitia in firma ',
-		description: 'Descriere membru',
+		role: '',
+		description: '',
 		emai: 'email5@dreamonit.ro',
 		img: './images/team/user.svg',
 	},
 ];
 
+export const TeamMembers = TeamMembersBp.map((item, index) => {
+	if (lang === 'ro') {
+		item.role = TeamMembersRo[index].role;
+		item.description = TeamMembersRo[index].description;
+		return item;
+	} else {
+		item.role = TeamMembersEn[index].role;
+		item.description = TeamMembersEn[index].description;
+		return item;
+	}
+});
+
 /**************************************************************************/
 
 /* News ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-export const NewsTitle = 'News';
+export const NewsTitle = lang === 'ro' ? NewsTitleRo : NewsTitleEn;
 
-export const NewsList = [
-	{
-		title: 'Titlu articol 1',
-		added: '13.01.2021',
-		by: 'Team member',
-		content:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias animi nesciunt, esse aspernatur, voluptatem consectetur totam sint nostrum laboriosam nihil, doloribus praesentium iure dolore velit perspiciatis qui beatae nobis maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quia rem quos expedita dolore inventore nemo dicta architecto quaerat, reprehenderit, commodi numquam. Provident vitae error beatae natus quidem, fugiat sint!',
-	},
-	{
-		title: 'Titlu articol 2',
-		added: '13.01.2021',
-		by: 'Team member',
-		content:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias animi nesciunt, esse aspernatur, voluptatem consectetur totam sint nostrum laboriosam nihil, doloribus praesentium iure dolore velit perspiciatis qui beatae nobis maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quia rem quos expedita dolore inventore nemo dicta architecto quaerat, reprehenderit, commodi numquam. Provident vitae error beatae natus quidem, fugiat sint!',
-	},
-	{
-		title: 'Titlu articol 3',
-		added: '13.01.2021',
-		by: 'Team member',
-		content:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias animi nesciunt, esse aspernatur, voluptatem consectetur totam sint nostrum laboriosam nihil, doloribus praesentium iure dolore velit perspiciatis qui beatae nobis maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quia rem quos expedita dolore inventore nemo dicta architecto quaerat, reprehenderit, commodi numquam. Provident vitae error beatae natus quidem, fugiat sint!',
-	},
-	{
-		title: 'Titlu articol 4',
-		added: '13.01.2021',
-		by: 'Team member',
-		content:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias animi nesciunt, esse aspernatur, voluptatem consectetur totam sint nostrum laboriosam nihil, doloribus praesentium iure dolore velit perspiciatis qui beatae nobis maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quia rem quos expedita dolore inventore nemo dicta architecto quaerat, reprehenderit, commodi numquam. Provident vitae error beatae natus quidem, fugiat sint!',
-	},
-];
+export const NewsList = lang === 'ro' ? NewsListRo : NewsListEn;
 
 /**************************************************************************/

@@ -1,3 +1,5 @@
+import React from 'react';
+import { initLang } from './components/LangSelect';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.scss';
 import Navbar from './components/Navbar';
@@ -11,6 +13,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 function App() {
+	initLang();
 	AOS.init();
 	return (
 		<Router>
