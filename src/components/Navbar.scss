@@ -37,7 +37,7 @@
 
 .nav-menu {
 	font-weight: 600;
-	width: 50vw;
+	width: 55vw;
 	display: flex;
 	justify-content: space-around;
 }
@@ -85,7 +85,7 @@
 
 @media screen and (max-width: 1025px) {
 	.nav-menu {
-		width: 50vw;
+		width: 73vw;
 	}
 }
 
@@ -149,9 +149,8 @@
 		display: block;
 		color: vars.$text-white;
 		width: 100%;
-		height: 60px;
 		border: 0;
-		border: 1px solid rgba(255, 255, 255, 0.3);
+		// border: 1px solid rgba(255, 255, 255, 0.3);
 		z-index: 5;
 
 		&:hover,
