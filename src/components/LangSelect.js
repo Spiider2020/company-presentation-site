@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { RoFlag, EnFlag } from '../Data';
 import './LangSelect.scss';
 
@@ -11,6 +11,7 @@ export function initLang() {
 function LangSelect() {
 	const [language, SetLanguage] = useState(localStorage.getItem('lang'));
 	const [langDrop, setLangDrop] = useState(false);
+	const dDown = React.createRef();
 
 	const refreshPage = () => {
 		window.location.reload();
@@ -46,13 +47,21 @@ function LangSelect() {
 		}
 	};
 
+	const handleClickOutside = (e) => {
+		if (dDown.current && !dDown.current.contains(e.target)) {
+			closeDrop();
+		}
+	};
+
+	useEffect(() => {
+		window.addEventListener('mousedown', handleClickOutside);
+		return () => {
+			window.removeEventListener('mousedown', handleClickOutside);
+		};
+	});
+
 	return (
-		<div
-			className='navbar__lang__container'
-			onClick={toggleDrop}
-			onBlur={toggleDrop}
-			tabIndex='0'
-		>
+		<div className='navbar__lang__container' onClick={toggleDrop} ref={dDown}>
 			<div className='lang__content'>
 				<img src={language === 'ro' ? RoFlag : EnFlag} alt='flag' />
 				<p>{language}</p>
@@ -64,11 +73,11 @@ function LangSelect() {
 						: 'lang__selector__container'
 				}
 			>
-				<div onClick={handleLangSelectRo}>
+				<div className='lang__ro' onClick={handleLangSelectRo}>
 					<img src={RoFlag} alt='romanian flag' />
 					<p>Romana</p>
 				</div>
-				<div onClick={handleLangSelectEn}>
+				<div className='lang__en' onClick={handleLangSelectEn}>
 					<img src={EnFlag} alt='british flag' />
 					<p>English</p>
 				</div>

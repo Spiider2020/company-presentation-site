@@ -1,14 +1,17 @@
 @use '../scss/vars' as vars;
-
-.card__container__main {
-	background-color: vars.$text-white;
+.card__anim__container {
 	margin: 20px 40px;
 	width: 297px;
 	height: 367px;
+}
+
+.card__container__main {
+	background-color: vars.$text-white;
 	border-radius: 10px;
 	box-shadow: 0px 0px 5px black;
 	transition: all 0.2s ease-in;
 	&:hover {
+		-webkit-transform: scale(1.02);
 		transform: scale(1.02);
 		box-shadow: 0px 0px 9px black;
 		transition: all 0.2s ease-in;
@@ -59,7 +62,7 @@
 }
 
 @media screen and (max-width: 1025px) {
-	.card__container__main {
+	.card__anim__container {
 		margin: 20px 30px;
 	}
 }

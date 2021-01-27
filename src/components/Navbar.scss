@@ -62,6 +62,10 @@
 
 .nav__menu__lang {
 	font-weight: 400;
+	&:focus,
+	:active {
+		outline: none;
+	}
 }
 
 .nav-links {
@@ -152,13 +156,11 @@
 
 		&:hover,
 		:focus {
-			outline: 1px solid vars.$bg-light;
-			border: 1px solid vars.$bg-light;
+			outline: 0;
 			background-color: vars.$bg-dark;
 		}
 
 		.lang__selector__container {
-			top: 60px;
 			color: black;
 		}
 	}
