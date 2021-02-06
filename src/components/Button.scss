@@ -14,9 +14,8 @@
 }
 
 .btn--primary {
-	background-color: vars.$button-blue;
-	color: vars.$text-white;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	text-shadow: 0px 0px 3px grey;
 	transition: all 0.3s ease-in-out;
 }
 
@@ -26,9 +25,8 @@
 }
 
 .btn--pill {
-	background-color: vars.$button-blue;
-	color: vars.$text-white;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+	text-shadow: 0px 0px 3px grey;
 	transition: all 0.3s ease-in-out;
 	border-radius: 22px;
 }
@@ -66,11 +64,51 @@
 }
 
 .blue {
-	border: 3px solid vars.$button-blue;
-	color: vars.$text-blue;
+	border: 3px solid vars.$button-dark;
+	color: vars.$text-white;
 }
 
 .white {
 	border: 3px solid vars.$button-white;
 	color: vars.$text-white;
+}
+
+.yellow {
+	border: 3px solid vars.$button-yellow;
+	color: vars.$text-white;
+}
+
+.dark {
+	border: 3px solid vars.$button-dark;
+	color: vars.$text-white;
+}
+
+.orange {
+	border: 3px solid vars.$button-orange;
+	color: vars.$text-black;
+}
+
+.bg--blue {
+	background-color: vars.$button-blue;
+	color: vars.$text-white;
+}
+
+.bg--white {
+	background-color: vars.$button-white;
+	color: vars.$text-white;
+}
+
+.bg--yellow {
+	background-color: vars.$button-yellow;
+	color: vars.$text-black;
+}
+
+.bg--dark {
+	background-color: vars.$button-dark;
+	color: vars.$text-white;
+}
+
+.bg--orange {
+	background-color: vars.$button-orange;
+	color: vars.$text-black;
 }

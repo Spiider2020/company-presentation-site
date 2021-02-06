@@ -10,3 +10,12 @@
 	background: -moz-linear-gradient(top left, #4da8da, #27546d);
 	background: linear-gradient(to bottom right, #4da8da, #27546d);
 }
+
+@mixin partner-grad {
+	background: rgb(255, 223, 0);
+	background: linear-gradient(
+		160deg,
+		rgba(255, 223, 0, 1) 0%,
+		rgba(209, 101, 26, 1) 100%
+	);
+}

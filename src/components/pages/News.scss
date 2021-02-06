@@ -1,4 +1,5 @@
 @use '../../scss/vars' as vars;
+@use '../../scss/mixins' as mix;
 
 .news__container__main {
 	background-color: vars.$primary-white;
@@ -24,8 +25,8 @@
 }
 
 .news__item__title {
-	background-color: vars.$bg-light;
-	color: vars.$text-white;
+	@include mix.partner-grad;
+	color: vars.$text-black;
 	height: 70px;
 	border-radius: 7px 7px 0 0;
 	display: flex;

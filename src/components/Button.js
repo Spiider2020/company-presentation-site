@@ -1,11 +1,23 @@
 import React from 'react';
 import './Button.scss';
 
-const STYLES = ['btn--primary', 'btn--outline', 'btn--pill'];
+const STYLES = ['btn--primary', 'btn--primary--color', 'btn--outline', 'btn--pill'];
 
 const SIZES = ['btn--large', 'btn--small', 'btn--mobile', 'btn--wide'];
 
-const COLOR = ['primary', 'white', 'blue'];
+const COLOR = [
+	'primary',
+	'white',
+	'blue',
+	'yellow',
+	'dark',
+	'orange',
+	'bg--white',
+	'bg--blue',
+	'bg--yellow',
+	'bg--dark',
+	'bg--orange',
+];
 
 export const Button = ({
 	children,

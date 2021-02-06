@@ -1,8 +1,8 @@
 {
   "name": "dreamonit",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
-  "homepage": "http://79.117.223.199",
+  "homepage": "http://dreamonit.ro",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",

@@ -37,7 +37,7 @@
 
 .nav-menu {
 	font-weight: 600;
-	width: 55vw;
+	width: 50vw;
 	display: flex;
 	justify-content: space-around;
 }
@@ -85,7 +85,7 @@
 
 @media screen and (max-width: 1025px) {
 	.nav-menu {
-		width: 73vw;
+		width: 68vw;
 	}
 }
 
@@ -99,6 +99,7 @@
 		top: 112px;
 		left: -100%;
 		opacity: 0;
+		overflow: visible;
 		transition: all 0.2s ease;
 	}
 
@@ -107,8 +108,17 @@
 		left: 0;
 		opacity: 1;
 		transition: all 0.5s ease;
-		z-index: 1;
+		z-index: 7;
 		overflow: hidden;
+	}
+
+	.nav-item {
+		width: 100%;
+		height: calc((100vh - 170px) / 4);
+		&:hover {
+			border: 0;
+		}
+		z-index: 8;
 	}
 
 	.nav-links {
@@ -117,7 +127,7 @@
 		padding: 1rem;
 		width: 100%;
 		display: table;
-
+		z-index: 9;
 		p {
 			display: table-cell;
 			vertical-align: middle;
@@ -128,17 +138,7 @@
 	.nav-links:hover {
 		background-color: vars.$button-blue;
 		transition: all 0.3s ease;
-		z-index: 1;
-	}
-
-	.nav-item {
-		width: 100%;
-		height: 100%;
-		border: 0;
-		&:hover {
-			border: 0;
-		}
-		z-index: 1;
+		z-index: 9;
 	}
 
 	.nav__menu__lang {
@@ -177,5 +177,14 @@
 	.nav-logo {
 		width: 55px;
 		height: auto;
+	}
+}
+
+@supports (-webkit-touch-callout: none) {
+	.nav-menu {
+		height: calc(100vh - 110px);
+	}
+	.nav-item {
+		height: calc((100vh - 170px) / 4);
 	}
 }

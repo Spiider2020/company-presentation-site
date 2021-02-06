@@ -1,8 +1,10 @@
 @use '../scss/vars' as vars;
+@use '../scss/mixins' as mix;
 
 .customers__container__main {
-	background-color: vars.$primary-white;
+	@include mix.partner-grad;
 	width: 100%;
+	box-shadow: 0 -2px 5px grey;
 }
 
 .customers__container__content {

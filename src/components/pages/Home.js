@@ -4,7 +4,7 @@ import Section1 from '../Section1';
 import Services from '../Services';
 import Projects from '../Projects';
 import './Home.scss';
-import Workflow from '../Workflow';
+// import Workflow from '../Workflow';
 import Customers from '../Customers';
 import Footer from '../Footer';
 
@@ -15,7 +15,7 @@ function Home() {
 			<Section1 />
 			<Services />
 			<Projects />
-			<Workflow />
+			{/* <Workflow /> */}
 			<Customers />
 			<Footer />
 		</>

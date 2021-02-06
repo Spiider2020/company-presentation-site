@@ -82,6 +82,12 @@
 	transition: all 0.4s ease-out;
 }
 
+@media screen and (max-width: 1025px) {
+	.lang__selector__container {
+		left: -70px;
+	}
+}
+
 @media screen and (max-width: 768px) {
 	.navbar__lang__container {
 		flex-direction: column;
@@ -91,6 +97,7 @@
 		opacity: 1;
 		position: initial;
 		top: initial;
+		left: initial;
 		height: 130px;
 		width: 100%;
 		justify-content: center;
