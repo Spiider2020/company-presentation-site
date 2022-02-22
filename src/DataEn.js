@@ -83,21 +83,21 @@ export const ProjectsLinkTextEn = 'See project';
 
 export const ProjectListEn = [
 	{
-		name: 'Project 1',
+		name: 'Small  and medium company digitalization',
 		description: 'Through accessing of EU funds for small to medium businesses between 30,000 and 100,000 euros, DreamOn IT helps in the process of applying through creating the necessary documentation and projects. Depending on the eligibility of the project and access to funds, DreamOn IT helps in implementing it, monitoring of each phase and intermediate and final reporting.',
 	},
 	{
-		name: 'Project 2',
+		name: 'Portal X',
 		description: 'PortalX is a simple and efficient solution for integrating and digitalizing any business model. This solution can be pattented and replicated en masse in different activity domains. The team is comprised of multiple specialists from complex domains, making PortalX the friendliest application both for end-users as well as administration. PortalX is in the prototype phase.',
 	},
 	{
-		name: 'Project 3',
+		name: 'SoftOne',
 		description: 'As a SoftOne Romania partner DreamOn IT offers project implementation services such as: consulting, implementation, continuous improvement, custom development, support and maintenance.',
 	},
-	// {
-	// 	name: 'Project 4',
-	// 	description: 'Project 4 description',
-	// },
+	{
+		name: 'Bitrix24',
+		description: 'Bitrix24 is one of the best CRM software which provides a platform to organize and track interaction with potential or existing clients, partners, agents and other contacts. It is a collaboration platform that\'s perfect for CRM. It has over 30 tools that will help your business grow and enjoy the work in a team. ',
+	},
 	// {
 	// 	name: 'Project 5',
 	// 	description: 'Project 5 description',
@@ -284,5 +284,11 @@ export const AboutInfoEn = [
 // 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias animi nesciunt, esse aspernatur, voluptatem consectetur totam sint nostrum laboriosam nihil, doloribus praesentium iure dolore velit perspiciatis qui beatae nobis maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quia rem quos expedita dolore inventore nemo dicta architecto quaerat, reprehenderit, commodi numquam. Provident vitae error beatae natus quidem, fugiat sint!',
 // 	},
 // ];
+
+/**************************************************************************/
+
+/* Bitrix24 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+export const BitrixDescriptionEn = 'Bitrix24 description.';
 
 /**************************************************************************/

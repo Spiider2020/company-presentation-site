@@ -24,6 +24,7 @@ import {
 	AboutInfoEn,
 	// NewsTitleEn,
 	// NewsListEn,
+	BitrixDescriptionEn,
 } from './DataEn';
 import {
 	NavItemsRo,
@@ -51,15 +52,15 @@ import {
 	AboutInfoRo,
 	// NewsTitleRo,
 	// NewsListRo,
+	BitrixDescriptionRo,
 } from './DataRo';
 
 /* Limba ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-const lang =
-	localStorage.getItem('lang') === null ? 'ro' : localStorage.getItem('lang');
+const lang = localStorage.getItem('lang') === null ? 'ro' : localStorage.getItem('lang');
 
-export const RoFlag = './images/lang/romania.svg';
-export const EnFlag = './images/lang/united-kingdom.svg';
+export const RoFlag = '/images/lang/romania.svg';
+export const EnFlag = '/images/lang/united-kingdom.svg';
 
 /*****************************************************************************/
 
@@ -67,13 +68,13 @@ export const EnFlag = './images/lang/united-kingdom.svg';
 
 export const NavItems = lang === 'ro' ? NavItemsRo : NavItemsEn;
 
-export const NavLogo = './images/logo/logo_nobg.png';
+export const NavLogo = '/images/logo/logo_black.svg';
 
 /**************************************************************************/
 
 /* Hero ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 export const Hero = {
-	logoSrc: './images/logo/logo_nobg.png',
+	logoSrc: './images/logo/logo_original.svg',
 	motto: lang === 'ro' ? HeroRo.motto : HeroEn.motto,
 	cta_text: lang === 'ro' ? HeroRo.cta_text : HeroEn.cta_text,
 	cta_link: '/contact',
@@ -119,8 +120,7 @@ export const ServImg = './images/services/services.jpg';
 
 export const ProjectsTitle = lang === 'ro' ? ProjectsTitleRo : ProjectsTitleEn;
 
-export const ProjectsLinkText =
-	lang === 'ro' ? ProjectsLinkTextRo : ProjectsLinkTextEn;
+export const ProjectsLinkText = lang === 'ro' ? ProjectsLinkTextRo : ProjectsLinkTextEn;
 
 const ProjectListBp = [
 	{
@@ -147,14 +147,14 @@ const ProjectListBp = [
 		description: '',
 		link: '#',
 	},
-	// {
-	// 	name: '',
-	// 	img: './images/projects/img4x1.png',
-	// 	img2: './images/projects/img4x2.png',
-	// 	alt: 'project4',
-	// 	description: '',
-	// 	link: '#',
-	// },
+	{
+		name: '',
+		img: './images/projects/bitrix24_x1.png',
+		img2: './images/projects/bitrix24_x2.png',
+		alt: 'project4',
+		description: '',
+		link: '/projects/bitrix24',
+	},
 	// {
 	// 	name: '',
 	// 	img: './images/projects/img5x1.png',
@@ -217,14 +217,14 @@ export const CustomerTitle = lang === 'ro' ? CustomerTitleRo : CustomerTitleEn;
 
 export const CustomerList = [
 	{
-		name: 'customer1',
-		logo: './images/customers/logo-1.svg',
-		link: '#',
+		name: 'bitrix24',
+		logo: './images/customers/bitrix24-logo-en.svg',
+		link: 'https://www.bitrix24.com/',
 	},
 	// {
-	// 	name: 'customer2',
-	// 	logo: './images/customers/logo-2.svg',
-	// 	link: '#',
+	// 	name: 'softone',
+	// 	logo: './images/customers/logo-softone.png',
+	// 	link: 'https://www.softone.ro/',
 	// },
 	// {
 	// 	name: 'customer3',
@@ -284,8 +284,7 @@ export const MaxFooterMessage = 200;
 export const MaxContactMessage = 600;
 
 // forteaza rand nou cu:  $$
-export const CheckboxAgreementText =
-	lang === 'ro' ? CheckboxAgreementTextRo : CheckboxAgreementTextEn;
+export const CheckboxAgreementText = lang === 'ro' ? CheckboxAgreementTextRo : CheckboxAgreementTextEn;
 
 export const PopUpSending = lang === 'ro' ? PopUpSendingRo : PopUpSendingEn;
 
@@ -311,8 +310,7 @@ export const ContactData = {
 	phone: '0749 030 327',
 	emailTitle: 'Email:',
 	email: 'office@dreamonit.ro',
-	addressTitle:
-		lang === 'ro' ? ContactDataRo.addressTitle : ContactDataEn.addressTitle,
+	addressTitle: lang === 'ro' ? ContactDataRo.addressTitle : ContactDataEn.addressTitle,
 	address: 'Str. 13 Decembrie, Brasov',
 	socialTitle: 'Social',
 };
@@ -320,22 +318,22 @@ export const ContactData = {
 export const SocialData = [
 	{
 		name: 'Facebook',
-		logo: './images/icons/icon_Facebook.svg',
+		logo: '/images/icons/icon_Facebook.svg',
 		link: 'https://www.facebook.com/',
 	},
 	{
 		name: 'Instagram',
-		logo: './images/icons/icon_Instagram.svg',
+		logo: '/images/icons/icon_Instagram.svg',
 		link: 'https://www.instagram.com/',
 	},
 	{
 		name: 'Linkedin',
-		logo: './images/icons/icon_Linkedin.svg',
+		logo: '/images/icons/icon_Linkedin.svg',
 		link: 'https://www.linkedin.com/',
 	},
 	{
 		name: 'Twitter',
-		logo: './images/icons/icon_Twitter.svg',
+		logo: '/images/icons/icon_Twitter.svg',
 		link: 'https://twitter.com/',
 	},
 ];
@@ -405,5 +403,24 @@ export const AboutInfo = lang === 'ro' ? AboutInfoRo : AboutInfoEn;
 // export const NewsTitle = lang === 'ro' ? NewsTitleRo : NewsTitleEn;
 
 // export const NewsList = lang === 'ro' ? NewsListRo : NewsListEn;
+
+/**************************************************************************/
+
+/* Bitrix24 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+export const BitrixTitle = 'Bitrix24';
+
+export const BitrixLogo = '/images/customers/bitrix24-logo-en.svg';
+
+export const BitrixDescription = lang === 'ro' ? BitrixDescriptionRo : BitrixDescriptionEn;
+
+export const BitrixSlideImages = [];
+
+for (let i = 0; i <= 50; i++) {
+	let item = {
+		large: `/images/projects/bitrix/large/bitrix24-large-ro-${i}.jpeg`,
+	};
+	BitrixSlideImages.push(item);
+}
 
 /**************************************************************************/

@@ -6,9 +6,9 @@
 
 @mixin hero-grad {
 	background: #4da8da;
-	background: -webkit-linear-gradient(top left, #4da8da, #27546d);
-	background: -moz-linear-gradient(top left, #4da8da, #27546d);
-	background: linear-gradient(to bottom right, #4da8da, #27546d);
+	background: -webkit-linear-gradient(top left,#27546d, #4da8da);
+	background: -moz-linear-gradient(top left,#27546d, #4da8da);
+	background: linear-gradient(to bottom right,#27546d, #4da8da);
 }
 
 @mixin partner-grad {

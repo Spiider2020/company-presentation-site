@@ -1,0 +1,86 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css);
+
+.slider__main {
+	max-width: 100vw;
+	margin: 0 auto;
+}
+
+.slick-slider {
+	margin: 0 auto;
+}
+
+.slick-dots {
+	bottom: -75px;
+}
+
+.slick-next {
+	right: 25px;
+	width: 30px;
+	height: 30px;
+	&::before {
+		font-size: 30px;
+	}
+}
+
+.slick-prev {
+	left: 25px;
+	width: 30px;
+	height: 30px;
+	z-index: 1;
+	&::before {
+		font-size: 30px;
+	}
+}
+
+.carousel__image__container {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	img {
+		width: 100%;
+		margin: 0, auto;
+		border-radius: 15px;
+	}
+}
+
+@media screen and (max-width: 1380px) {
+	.bitrix__container__content {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 1000px) {
+	.slick-next,
+	.slick-prev {
+		top: 90%;
+	}
+
+	.slick-prev {
+		left: 10px;
+		width: 25px;
+		height: 25px;
+		z-index: 1;
+		&::before {
+			font-size: 25px;
+		}
+	}
+
+	.slick-next {
+		right: 10px;
+		width: 25px;
+		height: 25px;
+		&::before {
+			font-size: 25px;
+		}
+	}
+}
+
+@media screen and (max-width: 830px) {
+	.bitrix__container__content {
+		width: 100%;
+	}
+
+	.slick-dots {
+		bottom: -100px;
+	}
+}

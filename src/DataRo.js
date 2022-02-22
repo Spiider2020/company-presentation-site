@@ -106,10 +106,11 @@ export const ProjectListRo = [
 		description:
 			'Ca si partener SoftOne Romania, DreamOnIT oferă servicii de implementare a proiectelor precum: consultanta, implementare, imbunatatire continua, dezvoltare custom, support si mentenanta.',
 	},
-	// {
-	// 	name: 'Proiect 4',
-	// 	description: 'Descriere proiect 4',
-	// },
+	{
+		name: 'Bitrix24',
+		description:
+			'Bitrix24 este unul dintre cele mai bune programe CRM care oferă o platformă pentru organizarea și urmărirea interacțiunii cu clienți potențiali sau existenți, parteneri, agenți și alte contacte. Este o platformă de colaborare perfectă pentru CRM. Are peste 30 de instrumente care vă vor ajuta afacerea să crească și să se bucure de munca în echipă.',
+	},
 	// {
 	// 	name: 'Proiect 5',
 	// 	description: 'Descriere proiect 5',
@@ -173,8 +174,7 @@ export const CheckboxAgreementTextRo =
 
 export const PopUpSendingRo = 'Se trimite...';
 
-export const PopUpMessageRo =
-	'Veti fi contactat de un membru DreamOnIT in cel mai scurt timp posibil.';
+export const PopUpMessageRo = 'Veti fi contactat de un membru DreamOnIT in cel mai scurt timp posibil.';
 
 export const PopUpErrMessageRo = 'Ne pare rau! Nu s-a putut trimite formularul';
 
@@ -203,32 +203,38 @@ export const AboutInfoRo = [
 	{
 		title: 'Ce problema a identificat DreamOn IT in piata?',
 		titlePos: 'left',
-		text: 'In momentul de fata in Romania sunt inregistrate cca 500.000 IMM-uri iar nevoia digitalizarii aparuta prin noul mod de viata profesionala (telemunca) a pus in dificultate multe companii care inca nu au reusit sa se adapteze la noul mod de a performa activitatiile profesionale.',
+		text:
+			'In momentul de fata in Romania sunt inregistrate cca 500.000 IMM-uri iar nevoia digitalizarii aparuta prin noul mod de viata profesionala (telemunca) a pus in dificultate multe companii care inca nu au reusit sa se adapteze la noul mod de a performa activitatiile profesionale.',
 	},
 	{
 		title: 'Ce solutie exista pentru aceasta problema?',
 		titlePos: 'left',
-		text: 'DreamOn IT reprezinta solutia optima ce vine in sprijinul companiilor cu o gama larga de servicii IT Software, Hardware si Business development consultancy. Dorim sa ajutam toate categoriile de angajati sa se alinieze noilor norme business si sa le imbunatatim modul de lucru.',
+		text:
+			'DreamOn IT reprezinta solutia optima ce vine in sprijinul companiilor cu o gama larga de servicii IT Software, Hardware si Business development consultancy. Dorim sa ajutam toate categoriile de angajati sa se alinieze noilor norme business si sa le imbunatatim modul de lucru.',
 	},
 	{
 		title: 'In ce piata se incadreaza DreamOn IT?',
 		titlePos: 'left',
-		text: 'Românii devin tot mai mari consumatori de servicii online, atât pe dispozitive fixe, cât mai ales pe cele mobile, iar acest lucru se observă în efervescența business-ului din acest mediu, cu toate nivelurile și nișele aferente.',
+		text:
+			'Românii devin tot mai mari consumatori de servicii online, atât pe dispozitive fixe, cât mai ales pe cele mobile, iar acest lucru se observă în efervescența business-ului din acest mediu, cu toate nivelurile și nișele aferente.',
 	},
 	{
 		title: 'Ce ofera special solutia creata de DreamOn IT?',
 		titlePos: 'left',
-		text: 'Dream On IT reprezinta solutia optima de digitalizare, eficientizare, imbunatatire continua ce ofera pe langa Tool-ul (Portal X), care permite structurarea in mediul digital a tuturor departamentelor unui business, un centru de excelenta IT care asigura o vasta gama de servicii Hardware si Software.',
+		text:
+			'Dream On IT reprezinta solutia optima de digitalizare, eficientizare, imbunatatire continua ce ofera pe langa Tool-ul (Portal X), care permite structurarea in mediul digital a tuturor departamentelor unui business, un centru de excelenta IT care asigura o vasta gama de servicii Hardware si Software.',
 	},
 	{
 		title: 'Cum se va evalua succesul DreamOn IT?',
 		titlePos: 'left',
-		text: 'Succesul va fi masurat prin prezenta in piata si loialitatea clientilor. Solutia DreamOn IT va functiona pe baza de abonament, astfel costul implementarii si mentenantei este semnificativ scazut comparativ cu achizitionarea unei active comerciale. Clientii pot intrerupe abonamentul in cazul in care serviciile nu sunt conform asteptarilor, astfel, succesul este determinat atat prin cresterea numarului de clienti, cat si prin satisfactia acestora.',
+		text:
+			'Succesul va fi masurat prin prezenta in piata si loialitatea clientilor. Solutia DreamOn IT va functiona pe baza de abonament, astfel costul implementarii si mentenantei este semnificativ scazut comparativ cu achizitionarea unei active comerciale. Clientii pot intrerupe abonamentul in cazul in care serviciile nu sunt conform asteptarilor, astfel, succesul este determinat atat prin cresterea numarului de clienti, cat si prin satisfactia acestora.',
 	},
 	{
 		title: 'Care sunt gruparile pe care DreamOn IT intentioneaza sa le ajute?',
 		titlePos: 'left',
-		text: 'Companii cu numar de angajati intre 50-500 de persoane. Institutii cu numar de angajati intre 50-500 de persoane. Comapanii cu un numar de angajatii intre 1-100 de persoane.',
+		text:
+			'Companii cu numar de angajati intre 50-500 de persoane. Institutii cu numar de angajati intre 50-500 de persoane. Comapanii cu un numar de angajatii intre 1-100 de persoane.',
 	},
 ];
 
@@ -296,5 +302,12 @@ export const AboutInfoRo = [
 // 			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias animi nesciunt, esse aspernatur, voluptatem consectetur totam sint nostrum laboriosam nihil, doloribus praesentium iure dolore velit perspiciatis qui beatae nobis maxime! Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam quia rem quos expedita dolore inventore nemo dicta architecto quaerat, reprehenderit, commodi numquam. Provident vitae error beatae natus quidem, fugiat sint!',
 // 	},
 // ];
+
+/**************************************************************************/
+
+/* Bitrix24 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+export const BitrixDescriptionRo =
+	'Bitrix24 este unul dintre cele mai bune programe CRM care oferă o platformă pentru organizarea și urmărirea interacțiunii cu clienți potențiali sau existenți, parteneri, agenți și alte contacte. Este o platformă de colaborare perfectă pentru CRM. Are peste 30 de instrumente care vă vor ajuta afacerea să crească și să se bucure de munca în echipă.';
 
 /**************************************************************************/

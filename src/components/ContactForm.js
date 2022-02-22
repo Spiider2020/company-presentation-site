@@ -16,7 +16,7 @@ import './ContactForm.scss';
 function ContactForm({ formStyle }) {
 	const agreeText = CheckboxAgreementText.split('$$');
 	const default_size = FormData.btnSize;
-	const serverLocation = 'http://79.117.215.212:3005/send';
+	const serverLocation = 'https://api.ics-server.live/dreamonit/send';
 	const initialFormContent = {
 		name: '',
 		email: '',

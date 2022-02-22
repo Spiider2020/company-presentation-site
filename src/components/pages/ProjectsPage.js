@@ -1,5 +1,6 @@
 import React from 'react';
 import { ProjectsTitle, ProjectList, ProjectsLinkText } from '../../Data';
+import { Link } from 'react-router-dom';
 import { FaChevronRight } from 'react-icons/fa';
 import Footer from '../Footer';
 import './ProjectsPage.scss';
@@ -33,24 +34,14 @@ function Projects() {
 					{ProjectList.map((item, index) => {
 						return (
 							<div
-								className={
-									index % 2 === 0
-										? 'projects__card projects__bg--light'
-										: 'projects__card projects__bg--dark'
-								}
+								className={index % 2 === 0 ? 'projects__card projects__bg--light' : 'projects__card projects__bg--dark'}
 								key={'proj-' + index}
 								data-aos={checkIndexValContainer(index)}
 								data-aos-duration='400'
 								data-aos-easing='ease-in-out'
 							>
 								<div className='projects__card__content__container'>
-									<div
-										className={
-											index % 2 === 0
-												? 'projects__card__img--left'
-												: 'projects__card__img--right'
-										}
-									>
+									<div className={index % 2 === 0 ? 'projects__card__img--left' : 'projects__card__img--right'}>
 										<img
 											src={item.img2}
 											alt={item.alt}
@@ -69,11 +60,11 @@ function Projects() {
 								</div>
 
 								<div className='projects__card__link'>
-									<a href={item.link}>
+									<Link to={item.link}>
 										<span>
 											<p>{ProjectsLinkText}</p> <FaChevronRight />
 										</span>
-									</a>
+									</Link>
 								</div>
 							</div>
 						);
