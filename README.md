@@ -1,6 +1,23 @@
-# Getting Started with Create React App
+# Company presentation site   
+
+This is a presentation site I built a while back. It's built using React and uses a Node.js - Express - Nodemailer API to send the contact form to a specific email.   
+
+You can find the API [here](https://github.com/Spiider2020/form-sendmail).   
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Setup
+Clone the repository.   
+
+Run:   
+```
+$ npm install
+```
+Create a .env file in the root folder and add the following line:
+```
+REACT_APP_API_HOST='https://your-api-domain.com'
+```
+Then you can use your own back-end that needs to send back a 'success' response, or you can use the small API you can find [here](https://github.com/Spiider2020/form-sendmail).   
 
 ## Available Scripts
 
