@@ -16,7 +16,7 @@ import './ContactForm.scss';
 function ContactForm({ formStyle }) {
 	const agreeText = CheckboxAgreementText.split('$$');
 	const default_size = FormData.btnSize;
-	const serverLocation = process.env.REACT_APP_API_HOST;
+	const serverLocation = process.env.REACT_APP_API_HOST + '/send';
 	const initialFormContent = {
 		name: '',
 		email: '',
