@@ -114,8 +114,7 @@ export const ServBtn = {
 
 export const ProjectsTitle = lang === 'ro' ? ProjectsTitleRo : ProjectsTitleEn;
 
-export const ProjectsLinkText =
-	lang === 'ro' ? ProjectsLinkTextRo : ProjectsLinkTextEn;
+export const ProjectsLinkText = lang === 'ro' ? ProjectsLinkTextRo : ProjectsLinkTextEn;
 
 const ProjectListBp = [
 	{
@@ -279,8 +278,7 @@ export const MaxFooterMessage = 200;
 export const MaxContactMessage = 600;
 
 // forteaza rand nou cu:  $$
-export const CheckboxAgreementText =
-	lang === 'ro' ? CheckboxAgreementTextRo : CheckboxAgreementTextEn;
+export const CheckboxAgreementText = lang === 'ro' ? CheckboxAgreementTextRo : CheckboxAgreementTextEn;
 
 export const PopUpSending = lang === 'ro' ? PopUpSendingRo : PopUpSendingEn;
 
@@ -305,9 +303,8 @@ export const ContactData = {
 	phoneTitle: lang === 'ro' ? ContactDataRo.phoneTitle : ContactDataEn.phoneTitle,
 	phone: '0700 000 000',
 	emailTitle: 'Email:',
-	email: 'email1@dreamonit.ro',
-	addressTitle:
-		lang === 'ro' ? ContactDataRo.addressTitle : ContactDataEn.addressTitle,
+	email: 'catalin.stancalie@creativedb.eu',
+	addressTitle: lang === 'ro' ? ContactDataRo.addressTitle : ContactDataEn.addressTitle,
 	address: 'Str. oriunde pe harta',
 	socialTitle: 'Social',
 };
@@ -346,35 +343,35 @@ const TeamMembersBp = [
 		name: 'Nume 1',
 		role: '',
 		description: '',
-		emai: 'email1@dreamonit.ro',
+		emai: 'email1@creativedb.eu',
 		img: './images/team/user.svg',
 	},
 	{
 		name: 'Nume 2',
 		role: '',
 		description: '',
-		emai: 'email2@dreamonit.ro',
+		emai: 'email2@creativedb.eu',
 		img: './images/team/user.svg',
 	},
 	{
 		name: 'Nume 3',
 		role: '',
 		description: '',
-		emai: 'email3@dreamonit.ro',
+		emai: 'email3@creativedb.eu',
 		img: './images/team/user.svg',
 	},
 	{
 		name: 'Nume 4',
 		role: '',
 		description: '',
-		emai: 'email4@dreamonit.ro',
+		emai: 'email4@creativedb.eu',
 		img: './images/team/user.svg',
 	},
 	{
 		name: 'Nume 5',
 		role: '',
 		description: '',
-		emai: 'email5@dreamonit.ro',
+		emai: 'email5@creativedb.eu',
 		img: './images/team/user.svg',
 	},
 ];

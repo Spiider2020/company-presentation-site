@@ -123,23 +123,19 @@ export const WorkflowTitleEn = 'Work flow';
 export const WorkflowPasiEn = [
 	{
 		title: 'Step1',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
 	},
 	{
 		title: 'Step2',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
 	},
 	{
 		title: 'Step3',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
 	},
 	{
 		title: 'Step4',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
 	},
 ];
 
@@ -157,12 +153,11 @@ export const ContactTitleEn = 'Contact';
 
 // force new line with:  $$
 export const CheckboxAgreementTextEn =
-	'I agree to be contacted by a DreamOnIT team member. (Your data is not going to be used in any other way.)';
+	'I agree to be contacted by a CreativeDB team member. (Your data is not going to be used in any other way.)';
 
 export const PopUpSendingEn = 'Sending...';
 
-export const PopUpMessageEn =
-	'You will be contatcted by a member  DreamOnIT as soon as possible.';
+export const PopUpMessageEn = 'You will be contatcted by a member  CreativeDB as soon as possible.';
 
 export const PopUpErrMessageEn = 'We are sorry! Your form could not be submitted';
 

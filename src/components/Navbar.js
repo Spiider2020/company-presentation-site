@@ -23,7 +23,7 @@ function Navbar() {
 				<div className='navbar container'>
 					<Link to='/' className='navbar-logo'>
 						<img src={NavLogo} alt='logo' className='nav-logo' />
-						<p>DreamOnIT</p>
+						<p>CreativeDB</p>
 					</Link>
 					<ul className={click ? 'nav-menu active' : 'nav-menu'}>
 						<li className='nav__menu__lang--mobile'>
@@ -32,11 +32,7 @@ function Navbar() {
 						{NavItems.map((item, index) => {
 							return (
 								<li className='nav-item' key={'nav-' + index}>
-									<Link
-										to={item.url}
-										className={item.cName}
-										onClick={closeMobileMenu}
-									>
+									<Link to={item.url} className={item.cName} onClick={closeMobileMenu}>
 										<p>{item.title}</p>
 									</Link>
 								</li>

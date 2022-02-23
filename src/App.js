@@ -1,6 +1,6 @@
 import React from 'react';
 import { initLang } from './components/LangSelect';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.scss';
 import Navbar from './components/Navbar';
 import Home from './components/pages/Home';
@@ -19,13 +19,13 @@ function App() {
 		<Router>
 			<ScrollToTop />
 			<Navbar />
-			<Switch>
-				<Route path='/' exact component={Home} />
-				<Route path='/projects' exact component={ProjectsPage} />
-				<Route path='/news' exact component={News} />
-				<Route path='/about' exact component={About} />
-				<Route path='/contact' exact component={Contact} />
-			</Switch>
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='/projects' exact element={<ProjectsPage />} />
+				<Route path='/news' element={<News />} />
+				<Route path='/about' element={<About />} />
+				<Route path='/contact' element={<Contact />} />
+			</Routes>
 		</Router>
 	);
 }

@@ -44,8 +44,7 @@ export const HeroRo = {
 
 /* Services ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-export const ServQuoteRo =
-	'Citat inspirational care sa pastreze atentia vizitatorului.';
+export const ServQuoteRo = 'Citat inspirational care sa pastreze atentia vizitatorului.';
 
 export const ServTitleRo = 'Ce servicii oferim';
 
@@ -123,23 +122,19 @@ export const WorkflowTitleRo = 'Work flow';
 export const WorkflowPasiRo = [
 	{
 		title: 'Pas1',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
 	},
 	{
 		title: 'Pas2',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
 	},
 	{
 		title: 'Pas3',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
 	},
 	{
 		title: 'Pas4',
-		text:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
+		text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum suscipit animi distinctio optio nulla. Ratione numquam impedit sequi. Quod, dolorem repudiandae architecto qui laboriosam dolore inventore. Unde a eum quos?',
 	},
 ];
 
@@ -157,12 +152,11 @@ export const ContactTitleRo = 'Contact';
 
 // forteaza rand nou cu:  $$
 export const CheckboxAgreementTextRo =
-	'Sunt de acord sa fiu contactat de un membru din echipa DreamOnIT.$$(Datele dumneavoastra nu vor fi folosite in alt scop.)';
+	'Sunt de acord sa fiu contactat de un membru din echipa CreativeDB.$$(Datele dumneavoastra nu vor fi folosite in alt scop.)';
 
 export const PopUpSendingRo = 'Se trimite...';
 
-export const PopUpMessageRo =
-	'Veti fi contactat de un membru DreamOnIT in cel mai scurt timp posibil.';
+export const PopUpMessageRo = 'Veti fi contactat de un membru CreativeDB in cel mai scurt timp posibil.';
 
 export const PopUpErrMessageRo = 'Ne pare rau! Nu s-a putut trimite formularul';
 

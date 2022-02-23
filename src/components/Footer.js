@@ -1,16 +1,7 @@
 import React from 'react';
 import ContactForm from './ContactForm';
 import { ContactTitle, ContactData, SocialData } from '../Data';
-import {
-	FaPhoneAlt,
-	FaEnvelope,
-	FaAddressCard,
-	FaReact,
-	FaNodeJs,
-	FaHtml5,
-	FaSass,
-	FaCss3Alt,
-} from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaAddressCard, FaReact, FaNodeJs, FaHtml5, FaSass, FaCss3Alt } from 'react-icons/fa';
 import './Footer.scss';
 
 function Footer() {
@@ -74,7 +65,7 @@ function Footer() {
 						</div>
 					</div>
 					<p className='footer__copyright'>
-						Copyright &#169;DreamOnIT. <br />
+						Copyright &#169; Catalin Stancalie. <br />
 						Powered by
 						<span>
 							&nbsp;&nbsp; <FaReact />

@@ -16,7 +16,7 @@ import './ContactForm.scss';
 function ContactForm({ formStyle }) {
 	const agreeText = CheckboxAgreementText.split('$$');
 	const default_size = FormData.btnSize;
-	const serverLocation = 'http://79.117.215.212:3005/send';
+	const serverLocation = process.env.REACT_APP_API_HOST;
 	const initialFormContent = {
 		name: '',
 		email: '',
@@ -137,9 +137,7 @@ function ContactForm({ formStyle }) {
 						className='footer__form--full'
 						type='text'
 						name='message'
-						placeholder={
-							FormData.defMessage + ' (max ' + MaxFooterMessage + ' chars)'
-						}
+						placeholder={FormData.defMessage + ' (max ' + MaxFooterMessage + ' chars)'}
 						maxLength={MaxFooterMessage}
 						onChange={handleInputChange}
 					/>
@@ -165,13 +163,7 @@ function ContactForm({ formStyle }) {
 						</Button>
 					</div>
 				</form>
-				{isOpen && (
-					<Popup
-						title={popUpTitle}
-						content={popUpContent}
-						handleClose={togglePopup}
-					/>
-				)}
+				{isOpen && <Popup title={popUpTitle} content={popUpContent} handleClose={togglePopup} />}
 			</div>
 		);
 	} else if (formStyle === 'main') {
@@ -262,13 +254,7 @@ function ContactForm({ formStyle }) {
 							</Button>
 						</div>
 					</form>
-					{isOpen && (
-						<Popup
-							title={popUpTitle}
-							content={popUpContent}
-							handleClose={togglePopup}
-						/>
-					)}
+					{isOpen && <Popup title={popUpTitle} content={popUpContent} handleClose={togglePopup} />}
 				</div>
 			</div>
 		);
